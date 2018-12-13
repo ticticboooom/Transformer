@@ -7,7 +7,7 @@ module:testrunner
 # module:jobs
 
 
-POST     /                                       App.Index
+POST     /transform                             App.Transform
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

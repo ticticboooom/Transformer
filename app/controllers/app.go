@@ -10,7 +10,7 @@ type App struct {
 	*revel.Controller
 }
 
-func (c App) Index(body model.ProjectedData) revel.Result {
+func (c App) Transform(body model.ProjectedData) revel.Result {
 	result := make([]transformer.DataObject, len(body.Data))
 	for i, item := range body.Data {
 		result[i] = transformer.Project(item, body.Proj)
